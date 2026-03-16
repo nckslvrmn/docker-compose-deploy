@@ -9,7 +9,7 @@ The action runs `docker compose up` on the self-hosted runner, which executes di
 ## Prerequisites
 
 - A self-hosted GitHub Actions runner registered to your repo or org, running on the target host with Docker socket access. See [github-multi-runner](https://github.com/youruser/github-multi-runner) for a ready-made setup.
-- Docker Compose v2 on the runner host.
+- Docker on the runner host. Docker Compose v2 is installed automatically by this action.
 
 ## Usage
 
