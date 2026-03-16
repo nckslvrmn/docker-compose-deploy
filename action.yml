@@ -1,4 +1,4 @@
-name: 'Docker Compose Deploy'
+name: 'Docker Compose Deployer'
 description: 'Deploy or update a Docker Compose stack on a self-hosted runner'
 
 inputs:
