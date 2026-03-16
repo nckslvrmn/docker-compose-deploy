@@ -1,0 +1,23 @@
+name: 'Docker Compose Deploy'
+description: 'Deploy or update a Docker Compose stack on a self-hosted runner'
+
+inputs:
+  file:
+    description: 'Path to the docker-compose file'
+    required: false
+    default: 'docker-compose.yml'
+  args:
+    description: 'Additional arguments to pass to docker compose up'
+    required: false
+    default: ''
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Deploy stack
+      shell: bash
+      run: |
+        docker compose \
+          -f "${{ inputs.file }}" \
+          up -d --pull always --remove-orphans \
+          ${{ inputs.args }}
