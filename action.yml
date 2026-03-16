@@ -1,6 +1,11 @@
 name: 'Docker Compose Deployer'
 description: 'Deploy or update a Docker Compose stack on a self-hosted runner'
 
+branding:
+  icon: chevrons-up
+  color: blue
+
+
 inputs:
   file:
     description: 'Path to the docker-compose file'
